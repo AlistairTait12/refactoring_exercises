@@ -7,6 +7,7 @@
 # end
 
 class Browser
+  attr_reader :type
   def initialize(type = 'Safari')
     @type = type
   end
@@ -21,3 +22,7 @@ def tell_browser_type(browser)
     puts "You are using the non-#{desired} browser"
   end
 end
+
+# in IRB:
+# safari = Browser.new('Safari')
+# tell_browser_type(safari)
